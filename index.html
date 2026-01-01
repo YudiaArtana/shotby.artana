@@ -97,6 +97,7 @@ body {
 }
 
 .link-btn {
+    position: relative;
     padding: 16px;
     border-radius: 999px;
     text-decoration: none;
@@ -104,24 +105,31 @@ body {
     font-size: 15px;
     font-weight: 500;
 
-    /* FIX SAFARI iOS */
-    background-color: rgba(255,255,255,0.12);
-    background-image: linear-gradient(
+    border: 1px solid rgba(255,255,255,0.3);
+    overflow: hidden; /* PENTING */
+
+    /* JANGAN kasih background di sini */
+    background: transparent;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+}
+
+.link-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: linear-gradient(
         135deg,
         rgba(255,255,255,0.22),
         rgba(255,255,255,0.08)
     );
 
-    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
 
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
-
-    box-shadow:
-        0 8px 24px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.25);
-
-    transition: all 0.3s ease;
+    z-index: -1;
 }
 
 
@@ -134,6 +142,21 @@ body {
             inset 0 1px 0 rgba(255,255,255,0.35);
     }
 }
+
+@media (hover: hover) {
+    .link-btn:hover::before {
+        background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0.32),
+            rgba(255,255,255,0.12)
+        );
+    }
+
+    .link-btn:hover {
+        transform: translateY(-4px);
+    }
+}
+
 
 @supports (-webkit-backdrop-filter: blur(1px)) {
     .link-btn {
