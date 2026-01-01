@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>shootby.artana | Contact Detail</title>
+<title>shotby.artana | Contact Detail</title>
 
 <style>
 /* =====================
@@ -22,9 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding: 20px; /* <<< TAMBAHAN INI */
+    padding: 20px;
 
-    /* Dark luxury background */
     background:
         radial-gradient(circle at 20% 20%, rgba(255, 0, 150, 0.25), transparent 40%),
         radial-gradient(circle at 80% 30%, rgba(140, 0, 255, 0.35), transparent 45%),
@@ -40,12 +39,11 @@ body {
     padding: 28px 22px;
     text-align: center;
 
-    /* TRUE GLASS */
     background-color: rgba(255,255,255,0.12);
     background-image: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.22),
-    rgba(255,255,255,0.08)
+        135deg,
+        rgba(255,255,255,0.22),
+        rgba(255,255,255,0.08)
     );
 
     backdrop-filter: blur(22px) saturate(140%);
@@ -54,7 +52,6 @@ body {
     border-radius: 22px;
     border: 1px solid rgba(255,255,255,0.25);
 
-    /* Shadow like reference image */
     box-shadow:
         0 30px 60px rgba(0,0,0,0.6),
         inset 0 1px 0 rgba(255,255,255,0.3);
@@ -88,7 +85,7 @@ body {
 }
 
 /* =====================
-   GLASS BUTTONS
+   BUTTONS (IOS SAFE)
 ===================== */
 .links {
     display: flex;
@@ -97,70 +94,65 @@ body {
 }
 
 .link-btn {
-    position: relative;
     padding: 16px;
     border-radius: 999px;
     text-decoration: none;
     color: #fff;
     font-size: 15px;
-    font-weight: 500;
-
-    border: 1px solid rgba(255,255,255,0.3);
-    overflow: hidden; /* PENTING */
-
-    /* JANGAN kasih background di sini */
-    background: transparent;
-
-    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-}
-
-.link-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
+    font-weight: 600;
+    text-align: center;
 
     background: linear-gradient(
         135deg,
-        rgba(255,255,255,0.22),
-        rgba(255,255,255,0.08)
+        #1a1a1a,
+        #2b2b2b
     );
 
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.18);
 
-    z-index: -1;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
+/* CTA utama */
+.link-btn.primary {
+    background: linear-gradient(
+        135deg,
+        #ff2a6d,
+        #a855f7
+    );
 
+    border: none;
+
+    box-shadow:
+        0 12px 30px rgba(168,85,247,0.45);
+}
+
+/* Hover desktop */
 @media (hover: hover) {
     .link-btn:hover {
         transform: translateY(-4px);
-        background: rgba(255,255,255,0.28);
-        box-shadow:
-            0 16px 40px rgba(0,0,0,0.6),
-            inset 0 1px 0 rgba(255,255,255,0.35);
-    }
-}
 
-@media (hover: hover) {
-    .link-btn:hover::before {
         background: linear-gradient(
             135deg,
-            rgba(255,255,255,0.32),
-            rgba(255,255,255,0.12)
+            #2a2a2a,
+            #3a3a3a
         );
+
+        box-shadow:
+            0 18px 40px rgba(0,0,0,0.65),
+            inset 0 1px 0 rgba(255,255,255,0.25);
     }
 
-    .link-btn:hover {
-        transform: translateY(-4px);
-    }
-}
-
-
-@supports (-webkit-backdrop-filter: blur(1px)) {
-    .link-btn {
-        background-color: rgba(255,255,255,0.14);
+    .link-btn.primary:hover {
+        background: linear-gradient(
+            135deg,
+            #ff4d88,
+            #b56cff
+        );
     }
 }
 
@@ -172,15 +164,7 @@ body {
     font-size: 12px;
     color: rgba(255,255,255,0.45);
 }
-
-.footer a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    margin: 0 6px;
-}
 </style>
-
-
 </head>
 
 <body>
@@ -196,15 +180,22 @@ body {
     </div>
 
     <div class="links">
-        <a href="https://wa.me/087701117408" class="link-btn">Chat With Us Now! 📞💬</a>
+        <a href="https://wa.me/6287701117408" class="link-btn primary">
+            Chat With Us Now! 📞💬
+        </a>
+
         <a href="#" class="link-btn">Portfolio Graduation</a>
         <a href="#" class="link-btn">Portfolio Wedding</a>
-        <a href="https://instagram.com/yudiartana20" target="_blank" class="link-btn">IG : shotby.artana</a>
-        <a href="https://instagram.com/yudiartana20" target="_blank" class="link-btn">IG : graduationby.artana</a>
+        <a href="https://instagram.com/shotby.artana" target="_blank" class="link-btn">
+            IG : shotby.artana
+        </a>
+        <a href="https://instagram.com/graduationby.artana" target="_blank" class="link-btn">
+            IG : graduationby.artana
+        </a>
     </div>
 
     <div class="footer">
-        <a href="#">Copyright © 2026 shotby.artana</a>
+        Copyright © 2026 shotby.artana
     </div>
 </div>
 
