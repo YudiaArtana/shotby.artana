@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shootby.artana | Contact Detail</title>
+
+<style>
+/* =====================
+   RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px; /* <<< TAMBAHAN INI */
+
+    /* Dark luxury background */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 0, 150, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(140, 0, 255, 0.35), transparent 45%),
+        linear-gradient(135deg, #050505, #0b0b0b);
+}
+
+/* =====================
+   GLASS CONTAINER
+===================== */
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px 22px;
+    text-align: center;
+
+    /* TRUE GLASS */
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.05)
+    );
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.25);
+
+    /* Shadow like reference image */
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+/* =====================
+   PROFILE
+===================== */
+.profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.username {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.bio {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    margin-bottom: 26px;
+}
+
+/* =====================
+   GLASS BUTTONS
+===================== */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-btn {
+    padding: 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.22),
+        rgba(255,255,255,0.08)
+    );
+
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+    .link-btn:hover {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.28);
+        box-shadow:
+            0 16px 40px rgba(0,0,0,0.6),
+            inset 0 1px 0 rgba(255,255,255,0.35);
+    }
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    margin-top: 28px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+}
+
+.footer a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 0 6px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <img src="logo.jpg" alt="ShootByArtanaLogo" class="profile-img">
+
+    <div class="username">shotby.artana</div>
+
+    <div class="bio">
+        Photo & Videographer Based in Bali Island ✨<br>
+        #CaptureTheMomentKeepTheMemory
+    </div>
+
+    <div class="links">
+        <a href="https://wa.me/087701117408" class="link-btn">Chat With Us Now! 📞💬</a>
+        <a href="#" class="link-btn">Portfolio Graduation</a>
+        <a href="#" class="link-btn">Portfolio Wedding</a>
+        <a href="https://instagram.com/yudiartana20" target="_blank" class="link-btn">IG : shotby.artana</a>
+        <a href="https://instagram.com/yudiartana20" target="_blank" class="link-btn">IG : graduationby.artana</a>
+    </div>
+
+    <div class="footer">
+        <a href="#">Copyright © 2026 shotby.artana</a>
+    </div>
+</div>
+
+</body>
+</html>
